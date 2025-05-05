@@ -1,0 +1,63 @@
+What is API?
+
+First, let’s start with a definition for API.
+
+API stands for Application Programming Interfaces, at first it was like an option whether want to use it or not as an application architect. but now in the modern world of applications where we have server-less architectures and micro services, it became a must that you MUST use it. we will go through the most common attacks that you should try as a penetration tester, or you should protect as an application security engineer or architect. is that it? No. We need to deeply understand what we are going to attack right?!
+Simple API Diagram
+
+Let’s start with the following diagram:
+
+![Simple Application Diagram](./images/1.png)
+
+At this simple API diagram it fully represents a simple application with its copomnents showing the following:
+
+1- Client: Initiates HTTP(S) requests to access API services
+
+2- DNS: Resolves domain names (like api.example.com) to IP addresses.
+
+3- CDN: Serves static assets (images, JavaScript, etc.) closer to users for speed and redundancy.
+
+4- Load Balancer: Distributes incoming client requests evenly across multiple web servers.
+
+5- Web Server: Terminates HTTP/S requests, performs routing, and handles pre-processing like logging, auth headers, etc.
+
+6- Write-API: Handles operations that modify data (POST, PUT, DELETE)
+
+7- Read-API: Optimized for retrieving data (GET) and Often uses caching and read-replicas for speed.
+
+So, yes as we can see here API represents a (Middle Layer) or (Middleware) between the frond-end part and back-end part. You can understand it as 24/7 call center representative for the client (client-side for real) who should connect your always with your needed services you need from the company through a very nice call and attitude during the call (represented in a very simple JSON calls that you need to fill to use the real service.
+Who should use APIs?
+
+Short answer? Literally. Anyone!
+Anyone can use Magic.. I mean APIs.
+
+Whether it’s a service provider which providing its services to different companies (Shopify) or a company which serves its own clients only (Like a bank) or maybe it’s a payment gateway that’s providing payment services to different consumers & companies (VISA or Master Card).
+API Architecture
+External or Internal?
+APIs can be used in a lot of cases as Internal API gateway or External API gateway.
+By external here we mean it’s published over internet whether Internal means that only VPN or Internal employees & services are allowed to use it. The following diagram calrifies this more:
+A holistic overview of contemporary API architecture is provided by this diagram, which shows how structured API gateways allow internal and external users to communicate with a variety of Back-End systems.
+Through an External API Gateway, external consumers — such as partners, users worldwide, or public applications can connect. Prior to traffic moving forward, this gateway enforces security policies through internal authentication procedures and a centralized Identity Provider. Additionally, it integrates with content delivery networks (CDNs) to effectively serve static assets and cached responses. Either directly or via the Internal API Gateway, which forwards requests to underlying applications, internal users and systems can access services.
+
+We have here in the diagram as well the 3 main models of any application architecture which are:
+
+![API Archteciture](./images/2.png)
+
+1- Legacy Application
+
+2- Monolithic Application
+
+3- Micro-service Application
+Types of APIs
+
+Now, let’s go through different APIs technology being used in the market:
+
+    REST APIs (HTTP methods, endpoints, parameters)
+    GraphQL APIs (queries, mutations, introspection)
+    SOAP APIs (WSDL, XML structures)
+    gRPC APIs (protobuf interfaces)
+    Webhooks and Callbacks
+
+2025 API Attacks Cheat Sheet:
+
+After this quick intro to the API topic let’s dive deep into what we should consider as penetration testers or bug bounty hunters when we are trying to attack an application which uses an API.
